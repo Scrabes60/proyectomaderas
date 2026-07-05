@@ -46,7 +46,7 @@ export default function WhyChoose() {
             <div className="relative">
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800"
+                  src="https://images.unsplash.com/photo-1565885033546-a1f35b98f5b6?w=800&q=80"
                   alt="Taller de carpinteria profesional"
                   fill
                   className="object-cover"
