@@ -14,25 +14,39 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    @apply font-display font-semibold tracking-tight;
   }
 }
 
 @layer components {
+  /* Buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/30 active:scale-95;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary px-8 py-4 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary px-8 py-4 text-sm font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white hover:shadow-lg hover:shadow-primary/30 active:scale-95;
   }
 
   .btn-wood {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-wood px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-wood-dark hover:shadow-lg hover:shadow-wood/30 focus:outline-none focus:ring-2 focus:ring-wood focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-wood px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:bg-wood-dark hover:shadow-lg hover:shadow-wood/30 active:scale-95;
   }
 
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-white/10 backdrop-blur-sm px-8 py-4 text-sm font-semibold text-white border border-white/20 transition-all duration-300 hover:bg-white/20 hover:border-white/40 active:scale-95;
+  }
+
+  /* Cards & Containers */
   .card-hover {
     @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl;
+  }
+
+  .card-glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6;
+  }
+
+  .card-premium {
+    @apply bg-white rounded-2xl border border-neutral-100 p-8 shadow-premium hover:shadow-premium-lg transition-all duration-500 hover:-translate-y-1;
   }
 
   .section-padding {
@@ -41,6 +55,28 @@
 
   .container-custom {
     @apply mx-auto max-w-7xl;
+  }
+
+  /* Badges */
+  .badge-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary border border-primary/20;
+  }
+
+  .badge-wood {
+    @apply inline-flex items-center gap-2 rounded-full bg-wood/10 px-4 py-1.5 text-sm font-semibold text-wood border border-wood/20;
+  }
+
+  .badge-premium {
+    @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-accent-gold/20 to-wood/20 px-4 py-1.5 text-sm font-semibold text-wood border border-accent-gold/30;
+  }
+
+  /* Text utilities */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-wood to-primary bg-clip-text text-transparent;
+  }
+
+  .text-gradient-reverse {
+    @apply bg-gradient-to-r from-wood via-primary to-wood bg-clip-text text-transparent;
   }
 }
 
@@ -56,4 +92,49 @@
   .gradient-wood {
     background: linear-gradient(135deg, #B77A44 0%, #D49A5F 100%);
   }
+
+  .gradient-warm {
+    background: linear-gradient(135deg, #D49A5F 0%, #E8B896 100%);
+  }
+
+  /* Glassmorphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-md border border-black/20;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    @apply shadow-glow;
+  }
+
+  .glow-wood {
+    @apply shadow-glow-wood;
+  }
+
+  /* Text styling */
+  .text-muted {
+    @apply text-neutral-500;
+  }
+
+  .text-light {
+    @apply text-neutral-400;
+  }
+
+  /* Responsive utilities */
+  .container-max {
+    @apply max-w-7xl;
+  }
+
+  .section-spacing {
+    @apply space-y-8 md:space-y-12 lg:space-y-16;
+  }
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-300;
 }
