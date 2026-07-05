@@ -25,7 +25,10 @@ export default function Hero() {
           style={{
             backgroundImage:
               "linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)",
-            backgroundSize: "34px 
+            backgroundSize: "34px 34px",
+          }}
+        />
+      </div>
     </section>
   );
 }
